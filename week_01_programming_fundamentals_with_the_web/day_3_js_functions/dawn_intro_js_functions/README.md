@@ -7,6 +7,8 @@
 | Students should be able to explain what returning a value means and how it differs with printing a value|
 | Students should know what it means for a function to have scoped variables |
 
+
+
 ##Defining a function
 ```
 var greeting = function() {
@@ -24,11 +26,49 @@ var greeting = function (taco) {
 };
 
 var name = "Delmer";
-var name2 = "Anil";
+var name2 = "Brett";
 greeting(name);
 greeting(name2);
 ```
 
+
+##Why use functions?
+
+###Let's greet some instructors
+
+```
+var instructor = "Brett";
+console.log("Hello", instructor); // Hello Brett
+
+instructor = "Delmer";
+console.log("Hello", instructor); // Hello Delmer
+```
+
+###Or we could greet some students
+```
+var student = "Alexandra";
+console.log("Hello", student);  // Hello Alexandra
+
+student = "Emanuel";
+console.log("Hello", student); // Hello Emanuel
+```
+
+###So what does this have to do with functions?
+
+The question we should be asking is: Did we repeat ourselves in our code?
+```
+var greeter = function(person) {
+  // We can avoid re-writing the same code by placing that code inside of our function
+  console.log("Hello " + person + "!"); 
+};
+
+// Now let's greet some people.
+greeter("Brett");
+greeter("Alexandra");
+
+```
+
+Generalizing code inside of a procedure is called "abstraction"
 
 
 ##Defining a function with two parameter
@@ -41,7 +81,7 @@ var greeting = function (taco, stuff) {
 };
 
 var name = "Delmer";
-var name2 = "Anil";
+var name2 = "Brett";
 greeting(name, name2);
 greeting(name2, name);
 ```
